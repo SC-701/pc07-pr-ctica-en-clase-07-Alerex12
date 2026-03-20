@@ -34,7 +34,7 @@ namespace API.Controllers
 
         }
 
-        [HttpDelete("/EliminarProducto/{Id}")]
+        [HttpDelete("{Id}")]
         public async Task<IActionResult> Eliminar(Guid Id)
         {
             var resultado = await _productoFlujo.Eliminar(Id);
@@ -54,7 +54,7 @@ namespace API.Controllers
             return Ok(resultado);
         }
 
-        [HttpGet("ObtenerPorId/{Id}")]
+        [HttpGet("{Id}")]
         public async Task<IActionResult> Obtener(Guid Id)
         {
             var resultado = await _productoFlujo.Obtener(Id);

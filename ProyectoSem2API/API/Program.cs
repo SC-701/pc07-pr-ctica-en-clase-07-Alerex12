@@ -23,7 +23,10 @@ builder.Services.AddScoped<IRepositorioDapper, RepositorioDapper>();
 builder.Services.AddScoped<IProductoReglas, ProductoReglas>();
 builder.Services.AddScoped<ITipoCambioServicio, TipoCambioServicio>();
 builder.Services.AddHttpClient<ITipoCambioServicio, TipoCambioServicio>();
-
+builder.Services.AddScoped<ICategoriaDA, CategoriaDA>();
+builder.Services.AddScoped<ICategoriaFlujo, CategoriaFlujo>();
+builder.Services.AddScoped<ISubcategoriaFlujo, SubcategoriaFlujo>();
+builder.Services.AddScoped<ISubcategoriaDA, SubcategoriaDA>();
 
 var app = builder.Build();
 
